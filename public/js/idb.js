@@ -5,14 +5,14 @@ const request = indexedDB.open('budget_tracker', 1);
 request.onupgradeneeded = function(e) {
     // save reference to database
     const db = e.target.result;
-    // create object store
+    // create object store for transactions
     db.createObjectStore('new_transaction', { autoIncrement: true });
 };
 
 request.onsuccess = function(e) {
     db = e.target.result;
 
-    // check to see if app is connected to the internet
+    // check internet connection
     if(navigator.onLine) {
         // if connected, upload data
         uploadTransaction();
@@ -24,7 +24,7 @@ request.onerror = function(e) {
     console.log(e.target.errorCode);
 };
 
-// save transaction if no internet connection exists
+// save transaction if no connection exists
 function saveRecord(record) {
     // open new transaction
     const transaction = db.transaction(['new_transaction'], 'readwrite');
@@ -34,7 +34,7 @@ function saveRecord(record) {
     transactionObjectStore.add(record);
 };
 
-// upload data once internet connection is restored
+// upload data once connection is restored
 function uploadTransaction() {
     const transaction = db.transaction(['new_transaction'], 'readwrite');
     const transactionObjectStore = transaction.objectStore('new_transaction');
