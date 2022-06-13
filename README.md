@@ -13,7 +13,7 @@ SO THAT my account balance is accurate when I am traveling
 * [About](#about)
 
 * [Live Link](#live)
-https://ji-budget-tracker.herokuapp.com/
+
 
 * [Author](#author)
 Me :)
@@ -32,8 +32,8 @@ This a project was built using <br>
 * CSS
 
 ## Live
-![social api example video](/walkthrough//social-api-walkthrough.gif) <br>
-https://drive.google.com/file/d/17qc58Ah9WSprPx86uf1-AMntVc1e-k42/view Link to video
+https://ji-budget-tracker.herokuapp.com/ <br>
+![budget tracker](assets/img/Budget%20tool.jpg)
 ## Author 
 Me :)
 
