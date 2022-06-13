@@ -15,7 +15,7 @@ fetch("/api/transaction")
   });
 
 function populateTotal() {
-  // reduce transaction amounts to a single total value
+  // reduce transaction amounts to a single value
   let total = transactions.reduce((total, t) => {
     return total + parseInt(t.value);
   }, 0);
@@ -57,7 +57,7 @@ function populateChart() {
     return sum;
   });
 
-  // remove old chart if it exists
+  // remove old chart data
   if (myChart) {
     myChart.destroy();
   }
