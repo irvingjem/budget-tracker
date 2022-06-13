@@ -1,9 +1,9 @@
 # Budget Tracker
 
 ## USER STORY
-AS A social media startup <br>
-I WANT an API for my social network that uses a NoSQL database <br>
-SO THAT my website can handle large amounts of unstructured data <br>
+AS AN avid traveler
+I WANT to be able to track my withdrawals and deposits with or without a data/internet connection
+SO THAT my account balance is accurate when I am traveling 
 
 ## Table of Contents 
 ------
@@ -12,35 +12,34 @@ SO THAT my website can handle large amounts of unstructured data <br>
 
 * [About](#about)
 
-* [Demo](#demo)
+* [Live Link](#live)
+https://ji-budget-tracker.herokuapp.com/
 
 * [Author](#author)
-
+Me :)
 ## Installation
 1. Clone repository using 'git clone"
 2. Install necessary dependencies, run the following command: <br> 'npm install'
-3. To run application 'node server.js' in the command line
+3. To run application 'npm start' in the command line
 
 ## About
 This a project was built using <br>
 * Node.js
-* Inquirer
 * MongoDB
 * javaScript
+* Mongoose
+* HTML
+* CSS
 
-## Demo
+## Live
 ![social api example video](/walkthrough//social-api-walkthrough.gif) <br>
 https://drive.google.com/file/d/17qc58Ah9WSprPx86uf1-AMntVc1e-k42/view Link to video
 ## Author 
 Me :)
 
 ## SPECIFICATIONS
-GIVEN a social network API <br> 
-WHEN I enter the command to invoke the application <br> 
-THEN my server is started and the Mongoose models are synced to the MongoDB database <br> 
-WHEN I open API GET routes in Insomnia for users and thoughts <br> 
-THEN the data for each of these routes is displayed in a formatted JSON <br> 
-WHEN I test API POST, PUT, and DELETE routes in Insomnia <br> 
-THEN I am able to successfully create, update, and delete users and thoughts in my database <br> 
-WHEN I test API POST and DELETE routes in Insomnia <br> 
-THEN I am able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list <br> 
+GIVEN a budget tracker without an internet connection
+WHEN the user inputs an expense or deposit
+THEN they will receive a notification that they have added an expense or deposit
+WHEN the user reestablishes an internet connection
+THEN the deposits or expenses added while they were offline are added to their transaction history and their totals are updated
